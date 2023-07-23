@@ -1,0 +1,450 @@
+* {
+    list-style: none;
+}
+
+/* Styles for the desktop navbar */
+nav {
+    position: fixed;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: white;
+    width: 90px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.logo {
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease; /* 'ease' was misspelled */
+    margin: 10px 0 0 -15px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-logo {
+    margin: 0 0 0 10px;
+}
+
+a {
+    position: relative;
+    color: black;
+    display: table;
+    font-size: 14px;
+    width: 50px;
+    padding: 10px;
+    margin-left: -10px;
+}
+
+.fa-solid {
+    position: relative;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 3px;
+}
+
+/* Styles for the mobile navbar */
+@media (max-width: 768px) {
+    .mobile-nav {
+        background: white;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height:60px; /* Adjust the height as needed */
+    }
+    
+
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    .mobile-nav li {
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        text-align: center;
+    }
+   
+
+    .mobile-nav a {
+        color: black;
+        font-size: 40px;
+        text-align: center;
+        display: block;
+        padding: 10px;
+    }
+
+    .mobile-nav a img {
+        display: none;
+    }
+
+    .fa-magnifying-glass,
+    .fa-right-from-bracket {
+        display: none;
+    }
+
+    /* Spacing between icons */
+    .mobile-nav li:not(:last-child) {
+        margin-right: 25px; /* Adjust the spacing as needed */
+    }
+
+    .mobile-nav li:not(:first-child) {
+        margin-right: 35px; /* Adjust the spacing as needed */
+    }
+
+    /* Add this to avoid overlapping content with the navbar */
+    body {
+        margin-bottom: 60px; /* Same as the height of the .mobile-nav */
+    }
+}
+
+/* ---------------------- */
+
+.logo{
+    text-align: center;
+    display: flex;  
+    transition: all 0.5 ease;
+    margin: 10px 0 0 -15px;
+  }
+  .logo img{
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+  }
+  a{
+      position: relative;
+      color: black;
+      display: table;
+      font-size: 14px;
+      width: 50px;
+      padding: 10px;
+      margin-left: -10px;
+  
+  }
+  .fa-solid{
+      position: relative;
+      /* width:10px; */
+      height: 40px;
+      top: 14px;
+      font-size: 15px;
+      text-align: center;
+      margin-left: 3px;
+  
+  }
+  .nav-item{
+      position: relative;
+      top: 12px;
+      /* margin-left:10px; */
+  
+  
+  }
+  
+  .logout{
+      position: absolute;
+      bottom: 0;
+  }
+  
+  .bell{
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 50px;
+  }
+  .clr{
+      color:white;
+      background:blue;
+      border-radius: 14px;
+      
+      /* margin-bottom: 10px; */
+      /* margin-top: 60px; */
+      /* margin-right: 10px; */
+  }
+  /* .clr .fa-solid{ */
+      /* padding-bottom: 50px; */
+     
+      /* width: 30px; */
+      /* margin-right: 10px; */
+  /* } */
+  
+  .head{
+      display: flex;
+      text-align: center;
+      margin-top: 30px;
+  }
+  .head img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      padding: 10px;
+      /* object-fit: contain; */
+  }
+  .can{
+      text-align: center;
+      margin-top: 25px;
+  }
+  .can1{
+      text-align: left;
+  }
+  p{
+      font-size: 12px;
+      color: grey;
+  }
+  button{
+      width: 100px;
+      height: 30px;
+      border-radius: 6px;
+      color: white;
+      background: blue;
+  }
+  .first-col{
+      text-align: center;
+      align-items: center;
+  }
+  .can2{
+      text-align: left;
+      margin-top: 20px;
+      
+  }
+  .can2 hr{
+    width: 100%;
+  }
+  .lst{
+      padding-top: 2px;
+  }
+  .dis{
+      background:  rgb(248 248 248);
+      padding-left: 10%;
+      width: 30%;
+         /* width: 5%; */    
+      
+  }
+  hr{
+      width: 250px;
+  }
+  .coll{
+      text-align: left;
+  }
+  .coll h6{
+      color: blue;
+  }
+  .can4{
+      display: flex;
+      justify-content: space-around;
+  }
+  .can4 hr{
+      width: 100%;
+     color: blue;
+  }
+  .sub{
+      color: grey;
+      font-size: 12px;
+      /* width: 15%; */
+  }
+  .sub h5{
+    font-size: 12px;
+  }
+  h5{
+      color: black;
+      /* font-size: 10px; */
+  }
+  .charts{
+      position: relative;
+      width: 100%;
+      padding: 20%;
+      
+  }
+  #circularChart {
+      margin: 10px;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      
+    }
+    .coll{
+      margin-top: 3%;
+      /* margin-left: 3%; */
+    }
+    .emp_con{
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      padding-right: 3%;
+    }
+  .coll-3{
+      text-align: left;
+      background:  rgb(248 248 248);
+      padding-left: 3%;
+      padding-top: 3%;
+      border-radius: 6px;
+      height: 350px;
+  }
+  .btnn{
+   align-items: center;
+   margin-left: 5px;
+  }
+  /* h6{
+      text-align: center;
+      
+  } */
+  /* .container{} */
+  .blu{
+      text-align: center;
+      color: blue;
+      padding-top:25px;
+  }
+  .lrn{
+      color: blue;    
+  }
+  .para{
+      margin-top: 100px;
+      color: black;
+      font-weight: 500;
+  }
+  /* .container{
+  margin-left: 3%;
+  } */
+
+
+        /* Existing CSS styles here */
+
+/* Media query for mobile devices with screen width up to 767px */
+@media (max-width: 599px) {
+    .logo {
+        display: block;
+        text-align: left;
+        margin: 10px 0;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+    .logout,
+    .bell {
+        position: static;
+        margin-bottom: 10px;
+    }
+    /* .clr {
+        margin-top: 30px;
+    } */
+
+    .head {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .head img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .can {
+        margin-top: -45px;
+    }
+
+    .can2 {
+        margin-top: 15px;
+    }
+
+    .dis {
+        width: 100%;
+        padding-left: 5%;
+        margin-left: 3%;
+        
+    }
+    hr {
+        width: 150px; /* Mobile-specific styles for hr element */
+    }
+
+    .can4 {
+        flex-direction: column; /* Mobile-specific styles for .can4 class */
+    }
+
+    .can4 hr {
+        width: 50px; /* Mobile-specific styles for .can4 hr element */
+    }
+
+    .charts {
+        padding: 10%; /* Mobile-specific styles for .charts class */
+    }
+
+    .coll-3 {
+        padding: 5%;
+        height: auto; /* Mobile-specific styles for .coll-3 class */
+    }
+
+    .para {
+        margin-top: 50px; /* Mobile-specific styles for .para class */
+    }
+
+    /* Add more mobile-specific styles as needed */
+}
+/* <--first col4--> */
+.dis{
+    padding-left: 20px;
+    /* margin-left:-100; */
+}
+.dis2{
+    margin-left: 50px;
+}
+.dis2 hr{
+    width: 100%;
+}
+.dis3{margin-left: 2%;}
+
+
+/* Above graph content  css*/
+/* .dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  } */
+  @media screen and (min-device-width: 730px) and (max-device-width: 830px) { 
+    .container{
+        margin-left: 5%;
+    }
+    .sub{
+     font-size: 10px;
+     text-align: center;
+    }
+    .sub hr{
+        width: 100%;
+    }
+    .sub h5{
+        font-size: 10px;
+    }
+    .last{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media screen and (min-device-width: 1000px) and (max-device-width: 1024px) {
+    .container{
+        margin-left: 4%;
+    }
+} 
+@media screen and (min-width: 598px) and (max-width: 769px) {
+
+    .area{
+        width: 1020px;
+    }
+}
+.area{
+    height: 100vh;
+}

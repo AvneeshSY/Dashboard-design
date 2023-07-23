@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.27.1/dist/apexcharts.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <div class="container">
+        <nav class="mobile-nav">
+            <ul>
+                <li class="nav-logo">
+                    <a href="#" class="logo">
+                        <img src="pic/butter.png" class="logo">
+                    </a>
+                </li>
+                <li class="block-icon"><a href="#"><i class="fa-solid gap fa-magnifying-glass"></i></a></li>
+                <li class="block-icon"><a href="#" class=" clr"><i class="fa-solid gap  fa-house"></i></a></li>
+                <li class="block-icon"><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+                <li class="block-icon"><a href="#"><i class="fa-solid fa-comment"></i></a></li>
+                <li class="block-icon"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                <li class="block-icon"><a href="#" class="bell"><i class="fa-solid fa-bell"></i></a></li>
+                <li class="block-icon"><a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container row mrgn ">
+            <div class="col-md-4 dis area text-center">
+                <div class="head ">
+                    <img src="pic/man.webp" alt="" class="profile">
+                    <div class="can">
+                        <span><b>Hi Mike,</b></span>
+                        <p>welcome back.</p>
+                    </div>
+                </div>
+                <div class="can1">
+                    <h5>Today</h5>
+                    <h2>$19,892</h2>
+                    <p>Account Balance</p>
+                    <h6>$4,000</h6>
+                    <p>Year-to-Date contribute</p>
+                    <h6>$1,892</h6>
+                    <p>Total Interst</p>
+                    <button> I want to</button>
+                </div>
+                <div class="can2">
+                    <h5 class="lst">Recent Transactions</h5>
+                    <br>
+                    <p>2020-08-07</p>
+                    <h6 class="lst">Withdrawal Transfer to Bank-XXX11</h6>
+                    <hr>
+                    <p>2020-07-21</p>
+                    <h6 class="lst">Withdrawal Transfer to Bank-XXX11</h6>
+                    <hr>
+                    <p>2020-07-16</p>
+                    <h6 class="lst">Withdrawal Transfer to Bank-XXX11</h6>
+                    <hr>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4 coll">
+                <h6>Retirement Income</h6>
+                <h5>Starting Year 2056</h5>
+                <div class="can4 last">
+                    <div class="sub">
+                        <h5>$300,000</h5>
+                        My Goal
+                        <hr>
+                    </div>
+                    <div class="sub">
+                        <h5>59%</h5>
+                        Goal Achieved
+                        <hr>
+                    </div>
+                    <div class="sub">
+                        <h5>$300</h5>
+                        Est Monthly Income
+                        <hr>
+                    </div>
+                </div>
+                <h5>Contribute Overtime</h4>
+                    <!-- <div class="lastadd">
+                   <p> <span class="dot"></span> Employer: <b>K73,500</b></p>
+                   
+                </di> -->
+                    
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="py-3">
+                        <h6 style="color: black;">How to I compare to my peers?</h6>
+                        <p>These number represend current goal achievement.</p>
+                        <div class="row">
+                            <div class="col-4" style="margin-bottom: 10px; padding-bottom: 5px;">
+                                <p><b style="color: black;">Age: </b> Under 30 </p>
+                                <hr style="margin: 5px 0; width: 100%;">
+                                <p><b style="color: black;">Salary: </b> k-20 - k-30</p>
+                                <hr style="margin: 5px 0; width: 100%;">
+                                <p><b style="color: black;">Gender: </b>Male</p>
+                            </div>
+                            <div class="col-8">
+                                <div id="circularChart" style="width: 50px; height: 50px; margin: 10px; padding: 0;">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-4 coll-3 dis3">
+                <div class="can6 dis2">
+                    <h5>Retirement Strategy</h5>
+                    <b>Employee Contribute</b><br>
+                    <input type="range"> 12%<br>
+                    <b>Retirement Age</b><br>
+                    <input type="range"> 65%
+                    <hr>
+                    <div class="emp_con">
+                        <h6>Employer Contribution </h6>
+                        <h6>8.4</h6>
+                    </div>
+                    <div class="emp_con">
+                        <h6>Interest Rate </h6>
+                        <h6>5%</h6>
+                    </div>
+                    <button class="btnn">Update</button>
+                    <h6 class="blu"> View Help Docs ></h6>
+                </div>
+                <div class="py-5">
+                    <p="para">Are you considering a <b>Housing Advance?</b></p>
+                        <p>Limited time reduced interest</p>
+                        <h6 class="lrn">Learn More ></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- navbar end -->
+
+    <!-- main start -->
+
+
+
+
+
+
+
+
+
+
+    <script src="chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="circularChart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
